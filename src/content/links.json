@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "bluesky",
+    "title": "Bluesky",
+    "description": "This is my bluesky profile.",
+    "url": "https://bluesky.com/yourprofile"
+  },
+  {
+    "slug": "github",
+    "title": "Github",
+    "description": "This is my Github profile.",
+    "url": "https://github.com/yourprofile"
+  }
+]

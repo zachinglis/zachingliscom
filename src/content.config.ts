@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 
 const blog = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
@@ -16,4 +16,14 @@ const blog = defineCollection({
 		}),
 });
 
-export const collections = { blog };
+const links = defineCollection({
+	loader: file("./src/content/links.json"),
+	schema: () =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			url: z.string().url()
+		})
+})
+
+export const collections = { blog, links };
